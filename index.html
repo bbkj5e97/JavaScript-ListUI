@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sample UI</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/list_ui_demo.css" />
+		
+		<link rel="stylesheet" href="./css/font-awesome.min.css" />
+		<!-- 	<link rel="stylesheet" href="./css/font-awesome.min.css" /> -->
+		
+		<!-- 	<link rel="stylesheet" href="./css/jquery-ui.css" /> -->
+		<link rel="stylesheet" href="./css/jquery.mobile-1.4.2.css" />
+
+		<!--<link rel="shortcut icon" href="../favicon.ico" /> -->
+		
+		<script src="./js/jquery-1.11.0.js"></script>
+		<!-- 	<script src="/js/jquery-ui-1.10.2.custom.js"></script> -->
+		<script src="./js/jquery.mobile-1.4.2.js"></script>
+		<script src="./js/jquery-ui-1.10.4.min.js"></script>
+		<script src="./js/jquery.ui.touch-punch.min.js"></script>
+		
+		<script src="./js/main.js"></script>
+		<script src="./js/list_ui_cmnlog.js"></script>
+		<script src="./js/list_ui_toast.js"></script>
+		<script src="./js/list_ui_long_click.js"></script>
+		<script src="./js/list_ui_flick.js"></script>
+		<script src="./js/list_ui_task.js"></script>
+		<script src="./js/list_ui_sortable.js"></script>
+		<script src="./js/list_ui_menu.js"></script>
+		<script src="./js/list_ui_demo.js"></script>
+	</head>
+	<body>
+		<div data-role="header">
+			<h1>灯(ともす)</h1>
+				<a href="http://bit.iinur.com/project/1" data-icon="info" data-iconpos="notext">Info</a>
+		</div><!-- /header -->
+		<div id="project-task" class="ui-content">
+			
+			<p></p> <!-- ダミーデータ　このデータがないとリストの一行目がうまく表示できない -->
+
+			<ul id="demo000" data-role="listview" data-split-icon="bars" class="piece-list" >
+			
+				<li id="demo001" class="ui-state-default ui-li-piece ul-li-demo-level-1">
+					<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/66" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+						<p class="ul-li-piece-title">成果物ファイルアップロード 001
+							<span class="ul-li-tags">
+								<small></small>
+							</span>
+						</p>
+					</a>
+					<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+				</li>
+				<li id="demo002" class="ui-state-default ui-li-piece ul-li-demo-level-1">
+					<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/67" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+						<p class="ul-li-piece-title">フレンド 002
+							<span class="ul-li-tags">
+								<small></small>
+							</span>
+						</p>
+					</a>
+					<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+				</li>
+				<li id="demo003" class="ui-state-default ui-li-piece ul-li-demo-level-1">
+					<span class="ui-li-piece-collapse" id="parent3">
+						<a onClick="onClickExpandButton(this)">
+							<i class="fa fa-chevron-down"></i>
+						</a>
+					</span>
+					<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/3" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+						<p class="ul-li-piece-title">プロトタイプ作成 003</p>
+					</a>
+					<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+				</li>
+					<li id="demo004" class="ui-state-default ui-li-piece ul-li-demo-level-2">
+						<span class="ui-li-piece-collapse" id="parent5">
+							<a onClick="onClickExpandButton(this)">
+								<i class="fa fa-chevron-down"></i>
+							</a>
+						</span>
+						<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/5" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+							<p class="ul-li-piece-title">実装 004</p>
+						</a>
+						<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+					</li>
+						<li id="demo005" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/6" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">プロジェクトのグループ権限 005
+									<span class="ul-li-tags">
+										<small>JAVA&nbsp;&nbsp;</small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+						
+						<li id="demo130" class="ui-li-piece ul-li-demo-level-3">
+							<span class="ui-li-piece-check" id="check130">
+								<a onClick="">
+									<i class="fa fa-square-o"></i>
+								</a>
+							</span>
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/130" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">階層データ操作インタフェース作成
+									<span class="ul-li-tags">
+										<small>
+											<span class="ui-corner-all ui-shadow ui-tag-name-mini">jQuery Mobile</span>
+											<span class="ui-corner-all ui-shadow ui-tag-name-mini">JavaScript</span>
+											<span class="ui-corner-all ui-shadow ui-tag-name-mini">jQuery</span>
+											<span class="ui-corner-all ui-shadow ui-tag-name-mini">HTML</span>
+											<span class="ui-corner-all ui-shadow ui-tag-name-mini">CSS</span>
+										</small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+						
+						<li id="demo006" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/7" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">タスクのグループ権限 006
+									<span class="ul-li-tags">
+										<small></small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+						<li id="demo007" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item ui-li-piece-o" data-ajax="false" href="http://bit.iinur.com/piece/9" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">サブタスクの終了処理 007
+									<span class="ul-li-tags">
+										<small></small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+				<li id="demo008" class="ui-state-default ui-li-piece ul-li-demo-level-1">
+					<a class="ul-li-demo-item ui-li-piece-o" data-ajax="false" href="http://bit.iinur.com/piece/10" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+					<p class="ul-li-piece-title">プロジェクトの編集機能 008
+							<span class="ul-li-tags">
+								<small></small>
+							</span>
+						</p>
+					</a>
+					<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+				</li>
+				<li id="demo009" class="ui-state-default ui-li-piece ul-li-demo-level-1">
+					<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/11" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+						<p class="ul-li-piece-title">タスクの編集機能 009
+							<span class="ul-li-tags">
+								<small></small>
+							</span>
+						</p>
+					</a>
+					<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+				</li>
+				<li id="demo010" class="ui-state-default ui-li-piece ul-li-demo-level-1">
+					<span class="ui-li-piece-collapse" id="parent010">
+						<a onClick="onClickExpandButton(this)">
+							<i class="fa fa-chevron-down"></i>
+						</a>
+					</span>
+					<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/3" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+						<p class="ul-li-piece-title">ピンから外す 010
+							<span class="ul-li-tags">
+								<small></small>
+							</span>
+						</p>
+					</a>
+					<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+				</li>
+					<li id="demo011" class="ui-state-default ui-li-piece ul-li-demo-level-2">
+						<a class="ul-li-demo-item ui-li-piece-o" data-ajax="false" href="http://bit.iinur.com/piece/14" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+							<p class="ul-li-piece-title">同階層のサブタスクをまとめる 011
+								<span class="ul-li-tags">
+									<small></small>
+								</span>
+							</p>
+						</a>
+						<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+					</li>
+					<li id="demo012" class="ui-state-default ui-li-piece ul-li-demo-level-2">
+						<a class="ul-li-demo-item ui-li-piece-o" data-ajax="false" href="http://bit.iinur.com/piece/15" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+							<p class="ul-li-piece-title">未読メッセージ件数表示 012
+								<span class="ul-li-tags">
+									<small></small>
+								</span>
+							</p>
+						</a>
+						<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+					</li>
+					<li id="demo013" class="ui-state-default ui-li-piece ul-li-demo-level-2">
+						<span class="ui-li-piece-collapse" id="parent013">
+							<a onClick="onClickExpandButton(this)">
+								<i class="fa fa-chevron-down"></i>
+							</a>
+						</span>
+						<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/16" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+							<p class="ul-li-piece-title">プロジェクトタグ 013
+								<span class="ul-li-tags">
+									<small></small>
+								</span>
+							</p>
+						</a>
+						<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+					</li>
+						<li id="demo014" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item ui-li-piece-o" data-ajax="false" href="http://bit.iinur.com/piece/17" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">タスクタグ 014
+									<span class="ul-li-tags">
+										<small></small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+						<li id="demo015" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/27" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">プロフィール画像 015
+									<span class="ul-li-tags">
+										<small></small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+						<li id="demo016" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/35" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">完了タスク非表示 016
+									<span class="ul-li-tags">
+										<small></small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+					<li id="demo017" class="ui-state-default ui-li-piece ul-li-demo-level-2">
+						<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/36" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+							<p class="ul-li-piece-title">テキスト表示の適性化 017
+								<span class="ul-li-tags">
+									<small></small>
+								</span>
+							</p>
+						</a>
+						<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+					</li>
+					<li id="demo018" class="ui-state-default ui-li-piece ul-li-demo-level-2">
+						<a class="ul-li-demo-item ui-li-piece-o" data-ajax="false" href="http://bit.iinur.com/piece/37" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+							<p class="ul-li-piece-title">チャット、ピン、タスクタブをアイコン化 018
+								<span class="ul-li-tags">
+									<small></small>
+								</span>
+							</p>
+						</a>
+						<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+					</li>
+					<li id="demo019" class="ui-state-default ui-li-piece ul-li-demo-level-2">
+						<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/55" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+							<p class="ul-li-piece-title">タスク画面の一画面化 019
+								<span class="ul-li-tags">
+									<small></small>
+								</span>
+							</p>
+						</a>
+						<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+					</li>
+
+					<li id="demo020" class="ui-state-default ui-li-piece ul-li-demo-level-2">
+						<span class="ui-li-piece-collapse" id="parent020">
+							<a onClick="onClickExpandButton(this)">
+								<i class="fa fa-chevron-down"></i>
+							</a>
+						</span>
+						<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/56" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+							<p class="ul-li-piece-title">グッド2度押しでキャンセル 020
+								<span class="ul-li-tags">
+									<small></small>
+								</span>
+							</p>
+						</a>
+						<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+					</li>
+						<li id="demo021" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/57" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">パスワード 021
+									<span class="ul-li-tags">
+										<small></small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+						<li id="demo022" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/58" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">トップの通知機能適正化 022
+									<span class="ul-li-tags">
+										<small></small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+						<li id="demo023" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/60" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">メール通知 023
+									<span class="ul-li-tags">
+										<small>JAVA&nbsp;&nbsp;バッチ&nbsp;&nbsp;</small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+						<li id="demo024" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/61" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">グループチャット 024
+									<span class="ul-li-tags">
+										<small></small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+						<li id="demo025" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/62" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">タグの権限精査 025
+									<span class="ul-li-tags">
+										<small></small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+						<li id="demo026" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/63" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">チャット各種ボタンサイズ調整 026
+									<span class="ul-li-tags">
+										<small></small>
+									</span>
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+						<li id="demo027" class="ui-state-default ui-li-piece ul-li-demo-level-3">
+							<span class="ui-li-piece-collapse" id="parent8">
+								<a onClick="onClickExpandButton(this)">
+									<i class="fa fa-chevron-down"></i>
+								</a>
+							</span>
+							<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/8" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+								<p class="ul-li-piece-title">マイページ 027
+								</p>
+							</a>
+							<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+						</li>
+							<li id="demo028" class="ui-state-default ui-li-piece ul-li-demo-level-4">
+								<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/59" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+									<p class="ul-li-piece-title">自分に関連するチャット通知 028
+										<span class="ul-li-tags">
+											<small></small>
+										</span>
+									</p>
+								</a>
+								<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+							</li>
+							<li id="demo029" class="ui-state-default ui-li-piece ul-li-demo-level-4">
+								<span class="ui-li-piece-collapse" id="parent12">
+									<a onClick="onClickExpandButton(this)">
+										<i class="fa fa-chevron-down"></i>
+									</a>
+								</span>
+								<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/12" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+									<p class="ul-li-piece-title">アクティブログ 029
+									</p>
+								</a>
+								<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+							</li>
+								<li id="demo030" class="ui-state-default ui-li-piece ul-li-demo-level-5">
+									<a class="ul-li-demo-item ui-li-piece-o" data-ajax="false" href="http://bit.iinur.com/piece/32" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+										<p class="ul-li-piece-title">アクセスログ 030
+											<span class="ul-li-tags">
+												<small></small>
+											</span>
+										</p>
+									</a>
+									<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+								</li>
+								<li id="demo031" class="ui-state-default ui-li-piece ul-li-demo-level-5">
+									<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/34" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+										<p class="ul-li-piece-title">アクションログ確認画面 031
+											<span class="ul-li-tags">
+												<small></small>
+											</span>
+										</p>
+									</a>
+									<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+								</li>
+								<li id="demo032" class="ui-state-default ui-li-piece ul-li-demo-level-5">
+									<a class="ul-li-demo-item" data-ajax="false" href="http://bit.iinur.com/piece/33" onFlickLeft="onFlickLeftItem(this)" onFlickRight="onFlickRightItem(this)">
+										<p class="ul-li-piece-title">アクションログ 032
+											<span class="ul-li-tags">
+												<small></small>
+											</span>
+										</p>
+									</a>
+									<a class="ul-li-demo-sort-handle" onClick="onClickMenuButton(this)"></a>
+								</li>
+			</ul>
+		</div><!-- /project-task -->
+	</body>
+</html>
