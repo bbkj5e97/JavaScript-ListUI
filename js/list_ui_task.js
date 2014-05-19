@@ -992,6 +992,11 @@ function Task(oNode) {
 			return true;
 		}
 
+		var oRemoveNode = this._getNodeByClassName(this.CLASS_NAME_PIECE_CHECK);
+		if(oRemoveNode != null) {
+			this.mObjSelfNode.removeChild(oRemoveNode);
+		}
+
 		var oSanElement = document.createElement("SPAN");
 		oSanElement.className = this.CLASS_NAME_PIECE_COLLAPSE;
 		var oAElement = document.createElement("A");
@@ -1017,6 +1022,8 @@ function Task(oNode) {
 	 * 子タスクに変更する
 	 * 
 	 * @returns {boolean} 成功：true 失敗：false
+	 * 
+	 * TODO : このタスクの発行者が自分の場合、CLASS_NAME_PIECE_CHECKを復活させる必要がある
 	 */
 	Task.prototype.convertChildTask = function() {
 		if(this.isRootTask == true) {
@@ -1031,9 +1038,9 @@ function Task(oNode) {
 			return true;
 		}
 
-		var oRemoveChild = this._getNodeByClassName(this.CLASS_NAME_PIECE_COLLAPSE);
-		if(oRemoveChild != null) {
-			this.mObjSelfNode.removeChild(oRemoveChild);
+		var oRemoveNode = this._getNodeByClassName(this.CLASS_NAME_PIECE_COLLAPSE);
+		if(oRemoveNode != null) {
+			this.mObjSelfNode.removeChild(oRemoveNode);
 		}
 		cmnLog.funcOut(true);
 		return true;
