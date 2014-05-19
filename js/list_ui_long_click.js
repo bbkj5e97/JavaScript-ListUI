@@ -345,4 +345,4 @@ function LongClick() {
 
 	this._constructor();
 };
-var list_ui_long_click = new LongClick();
+// var list_ui_long_click = new LongClick();	// LongClickは使用しないため無効化
