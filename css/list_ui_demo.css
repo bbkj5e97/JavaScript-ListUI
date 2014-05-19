@@ -64,9 +64,6 @@
     cursor: move;
 	opacity: 1;
 }
-.ul-li-demo-sort-handle-disable{
-	opacity: 0.1;
-}
 .ul-li-demo-sort-moving{
 	border: ridge thin #888888;
 }
