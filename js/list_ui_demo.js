@@ -1,26 +1,3 @@
-/*
-　独自に定義した名称
-
-　　　class名							用途
-  ul-li-demo-item
-　ul-li-demo-menu					メニュー表示時のタグに設定
-　ul-li-demo-menu-up				メニューをアイテムの上側に表示する場合に設定
-　ul-li-demo-menu-down				メニューをアイテムの下側に表示する場合に設定
-  ul-li-demo-menu-cover				メニュー表示中にマウス・タッチ等のイベントを取るためのタグに設定
-  ul-li-demo-sort-handle			タスク並べ替え時のつまみ部分のタグに設定(有効時)
-  ul-li-demo-sort-moving 　　　　　 タスク並び替え中のタグに設定
-  ul-li-demo-level-[1-9]　　　　　　タスクの階層番号として設定
-  ul-li-demo-level-up               タスクの階層番号の変更(up)中に設定
-  ul-li-demo-level-down             タスクの階層番号の変更(down)中に設定
-
-
-　　　属性名　　　　　　　　　　用途
-  onLongClick			長押し時のコールバック関数設定用 ※未使用
-　onFlickLeft			左フリック(右→左)時のコールバック関数設定用
-　onFlickRight			右フリック(左→右)時のコールバック関数設定用
- */
-
-
 /**
  * onClickExpandButton
  * 
