@@ -4,7 +4,7 @@
  * @class ログ出力クラス
  */
 function CmnLog() {
-	this.enabled = false;
+	this.enabled = false; // 出力を無効化
 
 	this.FUNC_IN = 1;
 	this.FUNC_OUT = 2;
