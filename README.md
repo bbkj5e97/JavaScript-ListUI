@@ -20,14 +20,16 @@ JavaScript-ListUI
 　表示するアイコンは、仮です。  
 　そのアイコンクリック時の処理も、仮実装（Toast表示のみ）。  
   
+=================
   
 ### 追加ライブラリ
 　./js/jquery-ui-1.10.4.min.js　　　　　リスト並べ替えのために追加  
 　./js/jquery.ui.touch-punch.min.js　　 リスト並べ替えをスマホで使えるようにするために追加  
   
+=================
   
 ### 作成ファイル一覧
-　./index.html　　　　　　　　灯(ともす)のタスクリストをベースに作成　※変更点の詳細は下記参照  
+　./index.html　　　　　　　　灯(ともす)のタスクリストをベースに作成　※変更点の詳細は[下記参照](#indexhtml%E3%81%AE%E5%AF%BE%E5%BF%9C%E5%86%85%E5%AE%B9)  
 　./js/list_ui_cmnlog.js　　　ログ表示処理  
 　./js/list_ui_toast.js　　　 Toast表示処理  
 　./js/list_ui_flick.js　　　 フリックイベント処理  
@@ -38,6 +40,7 @@ JavaScript-ListUI
 　./js/list_ui_demo.js　　　　index.htmlの各エレメントに設定したonClick等のコールバック関数を定義  
 　./css/list_ui_demo.css　　　追加したクラス用のスタイル定義  
   
+=================
   
 ### js中で参照しているclass名・ID
 ##### 1.　class名
@@ -55,6 +58,7 @@ JavaScript-ListUI
 ##### 2.　ID
 　なし  
   
+=================
   
 ### 独自定義したclass名・ID・属性名
 ##### 1.　class名
@@ -81,6 +85,7 @@ JavaScript-ListUI
 　onLongClick　　　　　　　 長押し時のコールバック関数設定用 ※未使用  
 　data-callback　　　　　　 メニュー表示時に設定されたコールバック関数名の保存用  
   
+=================
   
 ### index.htmlの対応内容
 1.　リストアイテム並べ替えのため、&lt;UL&gt;に以下属性を追加  
@@ -101,3 +106,4 @@ JavaScript-ListUI
 6.　子タスクの表示・非表示切り替えのため、"ui-li-piece-collapse"配下の&lt;A&gt;に以下属性を追加  
 　　onClick="onClickExpandButton(this)"  
   
+=================
