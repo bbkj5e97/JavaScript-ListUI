@@ -29,7 +29,7 @@ JavaScript-ListUI
 =================
   
 ### 作成ファイル一覧
-　./index.html　　　　　　　　灯(ともす)のタスクリストをベースに作成　※変更点の詳細は*下記参照*。  
+　./index.html　　　　　　　　灯(ともす)のタスクリストをベースに作成　※変更点の詳細は_下記参照_。  
 　./js/list_ui_cmnlog.js　　　ログ表示処理  
 　./js/list_ui_toast.js　　　 Toast表示処理  
 　./js/list_ui_flick.js　　　 フリックイベント処理  
