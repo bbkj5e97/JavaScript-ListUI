@@ -4,6 +4,17 @@
  * @class タスククラス タスクを階層構造で操作するためのアクセッサを提供する
  * @param oNode タスクのノードオブジェクト
  */
+/**
+ * 
+ * Task操作クラス<br>
+ * <br>
+ * 
+ * タスクを階層(レベル)構造で操作するためのアクセッサを提供する<br>
+ * <br>
+ * 
+ * @param oNode Task生成の基となるノードオブジェクト<br>
+ * 
+ */
 function Task(oNode) {
 
 	Task.prototype.CLASS_NAME_PIECE_LIST = "piece-list";
