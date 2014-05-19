@@ -29,7 +29,7 @@ JavaScript-ListUI
 =================
   
 ### 作成ファイル一覧
-　./index.html　　　　　　　　灯(ともす)のタスクリストをベースに作成　※変更点の詳細は[下記参照](#indexhtml%E3%81%AE%E5%AF%BE%E5%BF%9C%E5%86%85%E5%AE%B9)  
+　./index.html　　　　　　　　灯(ともす)のタスクリストをベースに作成　※変更点の詳細は[下記参照]( hash mark indexhtml%E3%81%AE%E5%AF%BE%E5%BF%9C%E5%86%85%E5%AE%B9)  
 　./js/list_ui_cmnlog.js　　　ログ表示処理  
 　./js/list_ui_toast.js　　　 Toast表示処理  
 　./js/list_ui_flick.js　　　 フリックイベント処理  
@@ -106,4 +106,3 @@ JavaScript-ListUI
 6.　子タスクの表示・非表示切り替えのため、"ui-li-piece-collapse"配下の&lt;A&gt;に以下属性を追加  
 　　onClick="onClickExpandButton(this)"  
   
-=================
