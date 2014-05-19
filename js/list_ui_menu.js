@@ -1,13 +1,24 @@
-function MenuItem(sIconName, sFunctionName) {
-	this.iconName = sIconName;
-	this.functionName = sFunctionName;
-}
-
-
+/**
+ * 
+ * MenuItemsクラス<br>
+ * <br>
+ * 
+ * メニューに表示するアイテムを設定する<br>
+ * アイコン：表示するFont Awesomeアイコン<br>
+ * 関数名：アイコンがクリックされたときのコールバック関数<br>
+ * <br>
+ * 
+ */
 function MenuItems() {
+
+	function MenuItem(sIconName, sFunctionName) {
+		this.iconName = sIconName;
+		this.functionName = sFunctionName;
+	}
+
+
 	this.mItems = new Array();
 	this.length = 0;
-
 
 	MenuItems.prototype.push = function(sIconName, sFunctionName) {
 		var oMenuItem = new MenuItem(sIconName, sFunctionName);
@@ -38,6 +49,18 @@ function MenuItems() {
 }
 
 
+/**
+ * 
+ * Menu表示クラス<br>
+ * <br>
+ * 
+ * show()時に指定されたMenuItemsのアイコンを表示し、<br>
+ * アイコンがクリックされたら、指定されたスクリプトをコールバックする<br>
+ * <br>
+ * 
+ * @param oItem メニュー表示基となるHTMLエレメント
+ * 
+ */
 function Menu(oItem) {
 
 	Menu.prototype.ID_MENU = "ID_LIST_UI_MENU";
