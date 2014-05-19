@@ -117,7 +117,7 @@ function CmnLog() {
 		var aCaller = new Array();
 
 		var oErr = new Error();
-		if(oErr.stack == null) {
+		if(oErr.stack == null) { // iOSでは対応されていないため
 			aCaller[0] = "No Stack";
 			aCaller[1] = "0";
 			return aCaller;
@@ -152,42 +152,3 @@ function CmnLog() {
 	};
 }
 var cmnLog = new CmnLog();
-
-
-function Console() {
-	Console.prototype.log = function(sMsg) {
-		var sMsgEscape = this._html_escape(sMsg);
-		var sMessageHTML = sMsgEscape + "<br>";
-		var oDiv = document.getElementById("console_log");
-		if(oDiv != null) {
-			oDiv.innerHTML += sMessageHTML;
-		}
-	};
-
-	Console.prototype.error = function(sMsg) {
-		var sMsgEscape = this._html_escape(sMsg);
-		var sMessageHTML = sMsgEscape + "<br>";
-		var oDiv = document.getElementById("console_log");
-		if(oDiv != null) {
-			oDiv.innerHTML += sMessageHTML;
-		}
-	};
-
-	Console.prototype._html_escape = function(s) {
-		s = s.replace(/&/g, '&amp;');
-		s = s.replace(/>/g, '&gt;');
-		s = s.replace(/</g, '&lt;');
-		return s;
-	};
-};
-
-
-var UA = navigator.userAgent;
-var isIPhone = UA.indexOf("iPhone", 0);
-var isIPad = UA.indexOf("iPad", 0);
-if((isIPhone >= 0) || (isIPad >= 0)) {
-	console = new Console;
-	// window.onerror = function(error) {
-	// 	alert(error);
-	// };
-}
