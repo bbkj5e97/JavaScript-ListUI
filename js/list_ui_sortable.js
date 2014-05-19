@@ -1,3 +1,13 @@
+/**
+ * 
+ * リストソートクラス<br>
+ * <br>
+ * 
+ * リストのソート機能を有効化し、<br>
+ * ソート後のタスクのレベル変更、親タスク・子タスクの変更処理を行う<br>
+ * <br>
+ * 
+ */
 function Sortable() {
 
 	Sortable.prototype.CLASS_NAME_SORT_HANDLE = "ul-li-demo-sort-handle";
