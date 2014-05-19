@@ -1,3 +1,23 @@
+/**
+ * 
+ * Flick処理クラス<br>
+ * <br>
+ * 
+ * フリック（左右のみ）操作が行われたときに<br>
+ * 登録されている関数をコールバックする<br>
+ * <br>
+ * 
+ * 下記属性が指定されたHTML要素で、該当のイベントが発生したときに<br>
+ * 値に指定されたスクリプトを実行する。<br>
+ * ・onFlickLeft=""：左フリックの場合<br>
+ * ・onFlickRight=""：右フリックの場合<br>
+ * ※指定は左右片方のみでも可<br>
+ * <br>
+ * 
+ * HTML設定例：<br>
+ * &lt;a onFlickLeft=&quot;functionLeft(this)&quot; onFlickRight=&quot;functionRight(this)&quot;&gt;<br>
+ * 
+ */
 function Flick() {
 
 	var log = {

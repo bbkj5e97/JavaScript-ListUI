@@ -1,3 +1,26 @@
+/**
+ * 
+ * LongClick処理クラス<br>
+ * <br>
+ * 
+ * マウス・タッチ等の長押し操作が行われたときに<br>
+ * 登録されている関数をコールバックする<br>
+ * <br>
+ * 
+ * 下記属性が指定されたHTML要素で、長押しイベントが発生したときに<br>
+ * 値に指定されたスクリプトを実行する。<br>
+ * ・onLongClick=""<br>
+ * ※指定は左右片方のみでも可<br>
+ * <br>
+ * 
+ * HTML設定例：<br>
+ * &lt;a onLongClick=&quot;function(this)&quot;&gt;<br>
+ * <br>
+ * 
+ * ※Android/iOS端末の標準ブラウザでは、ブラウザ側の動作(サブメニュー表示等)が<br>
+ * 実行されてしまうため、別途その対応が必要。<br>
+ * 
+ */
 function LongClick() {
 
 	var log = {
@@ -322,4 +345,4 @@ function LongClick() {
 
 	this._constructor();
 };
-// var list_ui_long_click = new LongClick();
+var list_ui_long_click = new LongClick();
