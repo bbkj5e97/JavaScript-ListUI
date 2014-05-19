@@ -1,5 +1,19 @@
+/**
+ * 
+ * Toast表示クラス<br>
+ * <br>
+ * 
+ * 指定されたメッセージを一定時間表示する<br>
+ * <br>
+ * 
+ * 使用例：<br>
+ * toast.show("メッセージ"); //デフォルトの表示時間の場合<br>
+ * toast.show("メッセージ", toast.LENGTH_LONG); //表示時間を指定する場合<br>
+ * 
+ */
 function Toast() {
 
+	Toast.prototype.ID_NAME_TOAST = "ID_TOAST";
 	Toast.prototype.CLASS_NAME_TOAST = "ul-li-demo-toast";
 
 	var mTimerId = -1;
@@ -21,7 +35,7 @@ function Toast() {
 			nLength = this.LENGTH_SHORT;
 		}
 		var oDivElement = document.createElement("DIV");
-		oDivElement.id = "ID_TOAST";
+		oDivElement.id = this.ID_NAME_TOAST;
 		oDivElement.className = this.CLASS_NAME_TOAST;
 
 		var oPElement = document.createElement("P");
@@ -48,7 +62,7 @@ function Toast() {
 
 		window.clearTimeout(mTimerId);
 		mTimerId = -1;
-		var oDivElement = document.getElementById("ID_TOAST");
+		var oDivElement = document.getElementById(this.ID_NAME_TOAST);
 		if(oDivElement == null) {
 			return;
 		}
